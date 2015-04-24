@@ -21,9 +21,12 @@ jQuery(document).ready(function($){
 		}
 	}, 6000);
 
+	$('body').on('click', function(event){
+		clearInterval(autoplay);
+	});
+
 	//change visible slide
 	$('.cd-slider-nav li').on('click', function(event){
-		clearInterval(autoplay);
 		event.preventDefault();
 		var selectedItem = $(this);
 		if(!selectedItem.hasClass('selected')) {
@@ -104,4 +107,17 @@ jQuery(document).ready(function($){
 	    });
 	    return this;
 	};
+
+	$('a[href*=#]:not([href=#])').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+      var target = $(this.hash);
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+      if (target.length) {
+        $('html,body').animate({
+          scrollTop: target.offset().top - 50
+        }, 1000);
+        return false;
+      }
+    }
+  });
 });
