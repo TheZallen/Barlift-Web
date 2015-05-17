@@ -1,5 +1,16 @@
 /* -------------------------------- 
 
+Colors:
+Orange: FF613D
+Blue: 3D4B63
+Green: 2ECC71
+Light gray (backgrounds): F2F2F2
+Light Gray (text): B2B2B2
+
+-------------------------------- */
+
+/* -------------------------------- 
+
 Primary style
 
 -------------------------------- */
@@ -17,12 +28,7 @@ body {
   font-size: 1.6rem;
   font-family: "Open Sans", sans-serif;
   color: #2c343b;
-  background-color: #f2f2f2;
-  background: url('../assets/img.jpg') no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: #FFF; 
 }
 
 a {
@@ -34,6 +40,18 @@ img {
   max-width: 100%;
 }
 
+h1 {
+  text-align: center;
+  margin-bottom: 50px;
+  color: #3D4B63;
+  -webkit-transition: color 0.5s;
+  -moz-transition: color 0.5s;
+  transition: color 0.5s;
+}
+h1:hover{
+  color: #FF613D;
+}
+
 /* -------------------------------- 
 
 Main Components 
@@ -41,7 +59,7 @@ Main Components
 -------------------------------- */
 .cd-header {
   position: absolute;
-  z-index: 2;
+  z-index: 3;
   top: 0;
   left: 0;
   width: 100%;
@@ -49,10 +67,13 @@ Main Components
   background-color: #21272c;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-transition: opacity 0.5s;
+  -moz-transition: opacity 0.5s;
+  transition: opacity 0.5s;
 }
 @media only screen and (min-width: 768px) {
   .cd-header {
-    height: 70px;
+    height: 90px;
     background-color: transparent;
   }
 }
@@ -63,14 +84,14 @@ Main Components
 }
 #cd-logo img {
   display: block;
-  width: 100px;
+  height: 30px;
 }
 @media only screen and (min-width: 768px) {
   #cd-logo {
     margin: 10px 0 0 5%;
   }
   #cd-logo img {
-    width: 200px;
+    height: 70px;
   }
 }
 
@@ -170,6 +191,7 @@ Slider
   position: absolute;
   top: 0;
   left: 0;
+  list-style: none;
   width: 100%;
   height: 100%;
   -webkit-transform: translateX(100%);
@@ -227,11 +249,11 @@ Single slide style
 }
 .cd-hero-slider li:nth-of-type(1) {
   background-color: #3d4952;
-  background-image: url("../assets/img.jpg");
+  background-image: url("../assets/wood-bg.jpg");
 }
 .cd-hero-slider li:nth-of-type(2) {
   background-color: #3d4952;
-  background-image: url("../assets/wood-bg.jpg");
+  background-image: url("../assets/rooftop.jpg");
 }
 .cd-hero-slider li:nth-of-type(3) {
   background-color: #586775;
@@ -330,7 +352,7 @@ Single slide style
   display: inline-block;
   padding: 1.2em 1.4em;
   margin-top: .8em;
-  background-color: rgba(255,64,0,.9);
+  background-color: #FF613D;
   font-size: 1.3rem;
   font-weight: 700;
   letter-spacing: 1px;
@@ -347,8 +369,11 @@ Single slide style
 .cd-hero-slider .cd-btn:nth-of-type(2) {
   margin-left: 1em;
 }
+.cd-hero-slider .cd-btn:nth-of-type(3) {
+  margin-left: 1em;
+}
 .no-touch .cd-hero-slider .cd-btn:hover {
-  background-color: #d44457;
+  background-color: #C95F3C;
 }
 .no-touch .cd-hero-slider .cd-btn.secondary:hover {
   background-color: #161a1e;
@@ -394,7 +419,7 @@ Single slide style
 @media only screen and (min-width: 1170px) {
   .cd-hero-slider .cd-full-width,
   .cd-hero-slider .cd-half-width {
-    padding-top: 220px;
+    padding-top: 200px;
   }
   .cd-hero-slider h2, .cd-hero-slider p {
     margin-bottom: 20px;
@@ -585,6 +610,7 @@ Slider navigation
 .cd-slider-nav li {
   display: inline-block;
   width: 60px;
+  padding-top: 5px;
   float: left;
 }
 .cd-slider-nav li.selected a {
@@ -622,22 +648,22 @@ Slider navigation
 .no-touch .cd-slider-nav a:hover {
   background-color: rgba(0, 1, 1, 0.5);
 }
-.cd-slider-nav li:first-of-type a::before {
+/*.cd-slider-nav li:first-of-type a::before {
   background-position: 0 0;
 }
 .cd-slider-nav li.selected:first-of-type a::before {
   background-position: 0 -24px;
-}
-.cd-slider-nav li:nth-of-type(2) a::before {
+}*/
+.cd-slider-nav li:first-of-type a::before {
   background-position: -24px 0;
 }
-.cd-slider-nav li.selected:nth-of-type(2) a::before {
+.cd-slider-nav li.selected:first-of-type a::before {
   background-position: -24px -24px;
 }
-.cd-slider-nav li:nth-of-type(3) a::before {
+.cd-slider-nav li:nth-of-type(2) a::before {
   background-position: -48px 0;
 }
-.cd-slider-nav li.selected:nth-of-type(3) a::before {
+.cd-slider-nav li.selected:nth-of-type(2) a::before {
   background-position: -48px -24px;
 }
 .cd-slider-nav li:nth-of-type(4) a::before {
@@ -654,7 +680,7 @@ Slider navigation
 }
 @media only screen and (min-width: 768px) {
   .cd-slider-nav {
-    height: 80px;
+    height: 90px;
   }
   .cd-slider-nav .cd-marker,
   .cd-slider-nav li {
@@ -724,8 +750,39 @@ Extra Customizations
   margin-bottom: 50px;
 }
 
+#hero {
+  background-color: #3D4B63;
+  background: url('../assets/rooftop.jpg') no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
+}
+#hero h1{
+  color: #FFF;
+  font-size: 5rem;
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+
+.hero-small {
+  background-color: #3D4B63;
+  background: url('../assets/rooftop.jpg') no-repeat center center; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
+}
+
+.hero-small h1{
+  color: #FFF;
+  font-size: 4rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 .container-fluid {
-  background-color: #f2f2f2;
+  background-color: #FFF;
 }
 
 .container p {
@@ -744,35 +801,23 @@ Extra Customizations
   text-align: center;
 }
 
-.col-md-2 {
-  margin-top: -50px;
-}
-
-.profile h3 {
-  -webkit-transform: translateY(50px);
-  -moz-transform: translateY(50px);
-  -ms-transform: translateY(50px);
-  -o-transform: translateY(50px);
-  transform: translateY(50px);
-  opacity: 0;
-  color: #FFF;
-  -webkit-transition: opacity 0.5s;
-  -moz-transition: opacity 0.5s;
-  transition: opacity 0.5s;
-}
-
 .profile img {
-  border-radius: 50%;
-  margin-bottom: 50px;
-  -webkit-transform: translateY(0px);
-  -moz-transform: translateY(0px);
-  -ms-transform: translateY(0px);
-  -o-transform: translateY(0px);
-  transform: translateY(0px);
+  -webkit-transform: scale(1,1);
+  -moz-transform: scale(1,1);
+  -ms-transform: scale(1,1);
+  -o-transform: scale(1,1);
+  transform: scale(1,1);
 
+  border-radius: 50%;
+  width: 150px;
   -webkit-transition: border-radius 0.5s, transform 0.5s;
   -moz-transition: border-radius 0.5s, transform 0.5s;
   transition: border-radius 0.5s, transform 0.5s;
+}
+
+.profile h3{
+  color: #3D4B63;
+  margin-bottom: 50px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -781,21 +826,13 @@ Extra Customizations
   }
 }
 
-
-.profile:hover h3 {
-  opacity: 1;
-}
-
 .profile:hover img{
-  -webkit-transform: translateY(50px);
-  -moz-transform: translateY(50px);
-  -ms-transform: translateY(50px);
-  -o-transform: translateY(50px);
-  transform: translateY(50px);
-
-  border-radius: 0%;
-
   
+  -webkit-transform: scale(1.1,1.1);
+  -moz-transform: scale(1.1,1.1);
+  -ms-transform: scale(1.1,1.1);
+  -o-transform: scale(1.1,1.1);
+  transform: scale(1.1,1.1);
 }
 
 .footer {
