@@ -363,6 +363,26 @@ Single slide style
   -moz-transition: background-color 0.2s;
   transition: background-color 0.2s;
 }
+.btn-download {
+  display: inline-block;
+  padding: 1.2em 1.4em;
+  margin-top: .8em;
+  margin-right: 20px;
+  background-color: #FF613D;
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #ffffff;
+  text-transform: uppercase;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+  -webkit-transition: background-color 0.2s;
+  -moz-transition: background-color 0.2s;
+  transition: background-color 0.2s;
+}
+.btn-download:hover{
+  background-color: #C95F3C;
+  color: #FFF;
+}
 .cd-hero-slider .cd-btn.secondary {
   background-color: rgba(22, 26, 30, 0.8);
 }
@@ -833,6 +853,16 @@ Extra Customizations
   -ms-transform: scale(1.1,1.1);
   -o-transform: scale(1.1,1.1);
   transform: scale(1.1,1.1);
+}
+
+.social img {
+  width: 20%;
+}
+
+@media only screen and (min-width: 768px) {
+  .social img{
+    width: 100%;
+  }
 }
 
 .footer {
