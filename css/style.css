@@ -170,6 +170,18 @@ Main Components
   }
 }
 
+.row-centered {
+   text-align:center;
+}
+.col-centered {
+   display:inline-block;
+   float:none;
+
+   text-align:left;
+
+   margin-right:-4px;
+}
+
 /* -------------------------------- 
 
 Slider
@@ -362,6 +374,7 @@ Single slide style
   -webkit-transition: background-color 0.2s;
   -moz-transition: background-color 0.2s;
   transition: background-color 0.2s;
+  border-radius: 100px;
 }
 .btn-download {
   display: inline-block;
@@ -806,9 +819,9 @@ Extra Customizations
 }
 
 .container p {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   line-height: 1.8;
-  color: #999999;
+  color: #494949;
   margin: 2em 0;
 }
 
@@ -866,7 +879,7 @@ Extra Customizations
 }
 
 .footer {
-  background-color: #DDD;
+  background-color: #EFEFEF;
 }
 
 .tagline {
