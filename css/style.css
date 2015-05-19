@@ -377,6 +377,7 @@ Single slide style
   border-radius: 100px;
 }
 .btn-download {
+  border-radius: 100px;
   display: inline-block;
   padding: 1.2em 1.4em;
   margin-top: .8em;
